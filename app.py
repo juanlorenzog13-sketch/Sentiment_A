@@ -3,6 +3,8 @@ import pandas as pd
 import streamlit as st
 from PIL import Image
 from googletrans import Translator
+from streamlit_lottie import st_lottie
+import json
 
 st.title('Análisis de Sentimiento')
 image = Image.open('emoticones.jpg')
@@ -25,6 +27,9 @@ with st.sidebar:
 
 with st.expander('Analizar texto'):
     text = st.text_input('Escribe por favor: ')
+  with open('graficos.json') as source:
+    animation=json.load(source)
+  st.lottie(animation, width = 350)
     if text:
 
         translation = translator.translate(text, src="es", dest="en")
