@@ -48,6 +48,6 @@ with st.expander('Analizar texto'):
             st.lottie(animation, width = 350)
         else:
             st.write( 'Es un sentimiento Neutral 😐')
-                      with open('Girl Studying on Laptop..json') as source:
+            with open('Girl Studying on Laptop..json') as source:
                 animation=json.load(source)
             st.lottie(animation, width = 350)
